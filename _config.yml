@@ -270,10 +270,10 @@ scholar:
   group_order: descending
 
 enable_publication_badges:
-  altmetric: true
-  dimensions: true
-  google_scholar: true
-  inspirehep: true
+  altmetric: false
+  dimensions: false
+  google_scholar: false
+  inspirehep: false
 
 filtered_bibtex_keywords:
   [
