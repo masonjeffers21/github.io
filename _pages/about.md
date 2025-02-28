@@ -6,10 +6,10 @@ permalink: /
 
 profile:
   align: right
-  image: prof_pic.jpg
+  image: mason_profile_pic.JPG
   image_circular: false # crops the image to make it circular
   more_info: >
-    <p>Knoxville, Tennessee</p>
+    <!--<p>Knoxville, Tennessee</p>-->
 
 selected_papers: false # includes a list of papers marked as "selected={true}"
 social: false # includes social icons at the bottom of the page
