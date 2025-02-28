@@ -1,8 +1,8 @@
 ---
 layout: page
-title: project 1
-description: with background image
-img: assets/img/12.jpg
+title: Robot Arm
+description: Restoration and software integration of a 6-axis robot arm.
+img: assets/img/robot_arm/robot_arm.JPG
 importance: 1
 category: work
 related_publications: true
