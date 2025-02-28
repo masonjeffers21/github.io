@@ -390,7 +390,7 @@ ninja.data = [{
           title: 'Robot Arm',
           description: "Restoration and software integration of a 6-axis robot arm.",
           section: "Projects",handler: () => {
-              window.location.href = "/projects/1_project/";
+              window.location.href = "/projects/RobotArm/";
             },},{
         id: 'social-email',
         title: 'email',
