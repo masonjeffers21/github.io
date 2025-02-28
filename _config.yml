@@ -11,9 +11,9 @@ contact_note: >
 description: >
   Welcome to my personal portfolio website. I am Mason Jeffers, an academic and developer showcasing my projects, research, and blog posts.
 footer_text: >
-  Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with the <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
-  Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
-  Photos from <a href="https://unsplash.com" target="_blank">Unsplash</a>.
+  <!--Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with the <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.-->
+  <!--Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.-->
+  <!--Photos from <a href="https://unsplash.com" target="_blank">Unsplash</a>.-->
 keywords: jekyll, jekyll-theme, academic-website, portfolio-website
 lang: en
 icon: ⚛️
@@ -50,7 +50,7 @@ rss_icon: true
 
 navbar_fixed: true
 footer_fixed: true
-search_enabled: true
+search_enabled: false
 socials_in_search: true
 bib_search: true
 
@@ -183,6 +183,11 @@ exclude:
   - readme_preview/
   - vendor
   - _pages/blog.md
+  - _pages/publications.md
+  - _pages/profiles.md
+  - _pages/repositories.md
+  - _pages/teaching.md
+  - _pages/dropdown.md
 keep_files:
   - CNAME
   - .nojekyll
