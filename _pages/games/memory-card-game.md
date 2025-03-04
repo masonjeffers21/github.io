@@ -20,8 +20,8 @@ nav_order: 1
         </div>
     </div>
     <div class="game-controls">
-        <button id="startGame">Start Game</button>
         <button id="resetGame">Reset</button>
+        <a href="/games/memory-leaderboard/" class="leaderboard-btn">View Leaderboard</a>
     </div>
     <div id="gameBoard" class="game-board"></div>
 </div>
@@ -63,7 +63,7 @@ nav_order: 1
     margin-bottom: 20px;
 }
 
-.game-controls button {
+.game-controls button, .leaderboard-btn {
     margin: 0 10px;
     padding: 8px 16px;
     font-size: 16px;
@@ -72,9 +72,11 @@ nav_order: 1
     color: white;
     border: none;
     border-radius: 4px;
+    text-decoration: none;
+    display: inline-block;
 }
 
-.game-controls button:hover {
+.game-controls button:hover, .leaderboard-btn:hover {
     background-color: #0056b3;
 }
 
@@ -113,6 +115,57 @@ nav_order: 1
     background-color: #4CAF50;
     color: white;
 }
+
+#nameModal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.modal-content {
+    position: relative;
+    background-color: white;
+    margin: 15% auto;
+    padding: 20px;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.modal-content h3 {
+    margin-top: 0;
+    color: #2196F3;
+}
+
+.modal-content input {
+    width: 80%;
+    padding: 8px;
+    margin: 10px 0;
+    border: 2px solid #2196F3;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.modal-content button {
+    padding: 8px 16px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #2196F3;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    margin-top: 10px;
+}
+
+.modal-content button:hover {
+    background-color: #1976D2;
+}
 </style>
 
 <script>
@@ -120,7 +173,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const gameBoard = document.getElementById('gameBoard');
     const movesDisplay = document.getElementById('moves');
     const timeDisplay = document.getElementById('time');
-    const startButton = document.getElementById('startGame');
     const resetButton = document.getElementById('resetGame');
     
     let cards = [];
@@ -129,9 +181,23 @@ document.addEventListener('DOMContentLoaded', function() {
     let timer = null;
     let flippedCards = [];
     let matchedPairs = 0;
+    let gameStarted = false;
     
     const emojis = ['🎮', '🎲', '🎯', '🎨', '🎭', '🎪', '🎟️', '🎠'];
     const totalPairs = emojis.length;
+    
+    // Create name input modal
+    const modal = document.createElement('div');
+    modal.id = 'nameModal';
+    modal.innerHTML = `
+        <div class="modal-content">
+            <h3>New High Score!</h3>
+            <p>Enter your name to save your score:</p>
+            <input type="text" id="playerName" maxlength="20" placeholder="Your name">
+            <button id="saveScore">Save Score</button>
+        </div>
+    `;
+    document.body.appendChild(modal);
     
     function createBoard() {
         gameBoard.innerHTML = '';
@@ -140,6 +206,7 @@ document.addEventListener('DOMContentLoaded', function() {
         timeElapsed = 0;
         matchedPairs = 0;
         flippedCards = [];
+        gameStarted = false;
         movesDisplay.textContent = '0';
         timeDisplay.textContent = '0:00';
         
@@ -167,6 +234,12 @@ document.addEventListener('DOMContentLoaded', function() {
         if (flippedCards.length === 2 || this.classList.contains('flipped') || 
             this.classList.contains('matched')) return;
         
+        // Start the game on first card flip
+        if (!gameStarted) {
+            gameStarted = true;
+            startTimer();
+        }
+        
         this.classList.add('flipped');
         this.textContent = this.dataset.value;
         flippedCards.push(this);
@@ -190,7 +263,7 @@ document.addEventListener('DOMContentLoaded', function() {
             if (matchedPairs === totalPairs) {
                 clearInterval(timer);
                 setTimeout(() => {
-                    alert(`Congratulations! You won in ${moves} moves and ${timeElapsed} seconds!`);
+                    checkHighScore();
                 }, 500);
             }
         } else {
@@ -215,14 +288,63 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 1000);
     }
     
-    startButton.addEventListener('click', () => {
-        createBoard();
-        startTimer();
-    });
+    function checkHighScore() {
+        const highScores = JSON.parse(localStorage.getItem('memoryHighScores') || '[]');
+        const currentScore = {
+            moves: moves,
+            time: timeElapsed,
+            date: new Date().toISOString()
+        };
+        
+        // Check if this is a high score (top 10)
+        if (highScores.length < 10 || 
+            moves < highScores[highScores.length - 1].moves || 
+            (moves === highScores[highScores.length - 1].moves && 
+             timeElapsed < highScores[highScores.length - 1].time)) {
+            showNameModal(currentScore);
+        }
+    }
+    
+    function showNameModal(score) {
+        modal.style.display = 'block';
+        const saveButton = document.getElementById('saveScore');
+        const nameInput = document.getElementById('playerName');
+        
+        saveButton.onclick = () => {
+            const playerName = nameInput.value.trim();
+            if (playerName) {
+                saveHighScore(playerName, score);
+                modal.style.display = 'none';
+                nameInput.value = '';
+            }
+        };
+    }
+    
+    function saveHighScore(playerName, score) {
+        const highScores = JSON.parse(localStorage.getItem('memoryHighScores') || '[]');
+        highScores.push({
+            name: playerName,
+            ...score
+        });
+        
+        // Sort by moves (primary) and time (secondary)
+        highScores.sort((a, b) => {
+            if (a.moves !== b.moves) return a.moves - b.moves;
+            return a.time - b.time;
+        });
+        
+        // Keep only top 10 scores
+        highScores.splice(10);
+        
+        localStorage.setItem('memoryHighScores', JSON.stringify(highScores));
+    }
     
     resetButton.addEventListener('click', () => {
         clearInterval(timer);
         createBoard();
     });
+    
+    // Initial draw
+    createBoard();
 });
 </script> 
