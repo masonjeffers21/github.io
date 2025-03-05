@@ -16,7 +16,7 @@ footer_text: >
   <!--Photos from <a href="https://unsplash.com" target="_blank">Unsplash</a>.-->
 keywords: jekyll, jekyll-theme, academic-website, portfolio-website
 lang: en
-icon: ⚛️
+icon: 🚀
 
 url: https://masonjeffers21.github.io # the base hostname & protocol for your site
 baseurl:  # the subpath of your site, e.g. /blog/. Leave blank for root

@@ -162,7 +162,6 @@ document.addEventListener('DOMContentLoaded', function() {
         x: canvas.width / 2,
         y: canvas.height / 2,
         radius: 10,
-        speed: 5,
         dx: 5,
         dy: 5,
         color: '#fff'
@@ -170,7 +169,6 @@ document.addEventListener('DOMContentLoaded', function() {
     
     const paddleHeight = 100;
     const paddleWidth = 10;
-    const paddleSpeed = 8;
     
     const player = {
         x: 0,
@@ -195,22 +193,22 @@ document.addEventListener('DOMContentLoaded', function() {
     let difficulty = 'easy';
     let mouseY = canvas.height / 2;
     
-    // AI settings for different difficulties
-    const aiSettings = {
-        easy: { 
-            reactionTime: 0.2,
-            accuracy: 0.8,
-            predictionFactor: 0.3
+    // Game settings
+    const settings = {
+        easy: {
+            ballSpeed: 4,
+            computerSpeed: 3,
+            computerAccuracy: 0.7
         },
-        medium: { 
-            reactionTime: 0.15,
-            accuracy: 0.9,
-            predictionFactor: 0.5
+        medium: {
+            ballSpeed: 6,
+            computerSpeed: 5,
+            computerAccuracy: 0.85
         },
-        hard: { 
-            reactionTime: 0.1,
-            accuracy: 0.95,
-            predictionFactor: 0.7
+        hard: {
+            ballSpeed: 8,
+            computerSpeed: 8,
+            computerAccuracy: 0.95
         }
     };
     
@@ -226,10 +224,8 @@ document.addEventListener('DOMContentLoaded', function() {
     // Mouse/touch event listeners
     function handlePointerMove(e) {
         const rect = canvas.getBoundingClientRect();
-        const scaleX = canvas.width / rect.width;
         const scaleY = canvas.height / rect.height;
         
-        // Handle both mouse and touch events
         const clientY = e.type.includes('touch') ? e.touches[0].clientY : e.clientY;
         mouseY = (clientY - rect.top) * scaleY;
         
@@ -239,69 +235,37 @@ document.addEventListener('DOMContentLoaded', function() {
     
     canvas.addEventListener('mousemove', handlePointerMove);
     canvas.addEventListener('touchmove', handlePointerMove, { passive: false });
-    
-    // Prevent scrolling on touch devices
     canvas.addEventListener('touchstart', (e) => e.preventDefault(), { passive: false });
     
-    // AI function with improved prediction
-    function updateAI() {
-        const settings = aiSettings[difficulty];
+    // Simple AI that follows the ball
+    function updateComputer() {
+        const currentSettings = settings[difficulty];
         
-        // Predict where the ball will be
-        let predictedY = ball.y;
-        if (ball.dx > 0) { // Only predict when ball is moving towards computer
-            const timeToReach = (canvas.width - ball.x) / ball.dx;
-            predictedY = ball.y + (ball.dy * timeToReach);
-            
-            // Add some randomness based on difficulty
-            const randomFactor = (1 - settings.accuracy) * 100;
-            predictedY += (Math.random() - 0.5) * randomFactor;
-            
-            // Bounce prediction
-            while (predictedY < 0 || predictedY > canvas.height) {
-                if (predictedY < 0) predictedY = -predictedY;
-                if (predictedY > canvas.height) predictedY = 2 * canvas.height - predictedY;
-            }
+        // Calculate target position (center of paddle)
+        const targetY = ball.y - (computer.height / 2);
+        
+        // Add some randomness to make it less perfect
+        const randomOffset = (Math.random() - 0.5) * (1 - currentSettings.computerAccuracy) * 50;
+        const finalTarget = targetY + randomOffset;
+        
+        // Move towards the target
+        const distance = finalTarget - computer.y;
+        const moveAmount = currentSettings.computerSpeed * Math.sign(distance);
+        
+        // Apply movement
+        computer.y += moveAmount;
+        
+        // Keep paddle within bounds
+        if (computer.y < 0) computer.y = 0;
+        if (computer.y + computer.height > canvas.height) {
+            computer.y = canvas.height - computer.height;
         }
-        
-        // Move towards predicted position with delay
-        const targetY = predictedY - (computer.height / 2);
-        const currentY = computer.y;
-        const distance = targetY - currentY;
-        
-        if (Math.abs(distance) > 5) {
-            const moveAmount = paddleSpeed * settings.reactionTime;
-            if (distance > 0) {
-                computer.y = Math.min(computer.y + moveAmount, canvas.height - computer.height);
-            } else {
-                computer.y = Math.max(computer.y - moveAmount, 0);
-            }
-        }
-    }
-    
-    // Game functions
-    function drawBall() {
-        ctx.beginPath();
-        ctx.arc(ball.x, ball.y, ball.radius, 0, Math.PI * 2);
-        ctx.fillStyle = ball.color;
-        ctx.fill();
-        ctx.closePath();
-    }
-    
-    function drawPaddle(paddle) {
-        ctx.fillStyle = paddle.color;
-        ctx.fillRect(paddle.x, paddle.y, paddle.width, paddle.height);
-    }
-    
-    function updatePaddles() {
-        // Player movement (cursor/mouse)
-        player.y = mouseY - paddleHeight/2;
-        
-        // Computer movement (AI)
-        updateAI();
     }
     
     function updateBall() {
+        const currentSettings = settings[difficulty];
+        
+        // Update ball position
         ball.x += ball.dx;
         ball.y += ball.dy;
         
@@ -314,7 +278,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (ball.x - ball.radius < player.x + player.width &&
             ball.y > player.y &&
             ball.y < player.y + player.height) {
-            ball.dx = -ball.dx;
+            ball.dx = Math.abs(ball.dx);
             // Add some randomness to the ball's vertical direction
             ball.dy += (Math.random() - 0.5) * 2;
         }
@@ -322,7 +286,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (ball.x + ball.radius > computer.x &&
             ball.y > computer.y &&
             ball.y < computer.y + computer.height) {
-            ball.dx = -ball.dx;
+            ball.dx = -Math.abs(ball.dx);
             // Add some randomness to the ball's vertical direction
             ball.dy += (Math.random() - 0.5) * 2;
         }
@@ -343,8 +307,9 @@ document.addEventListener('DOMContentLoaded', function() {
     function resetBall() {
         ball.x = canvas.width / 2;
         ball.y = canvas.height / 2;
-        ball.dx = -ball.dx;
-        ball.dy = Math.random() * 10 - 5;
+        const currentSettings = settings[difficulty];
+        ball.dx = (Math.random() > 0.5 ? 1 : -1) * currentSettings.ballSpeed;
+        ball.dy = (Math.random() * 2 - 1) * currentSettings.ballSpeed;
     }
     
     function draw() {
@@ -361,15 +326,32 @@ document.addEventListener('DOMContentLoaded', function() {
         ctx.stroke();
         ctx.setLineDash([]);
         
-        // Draw game objects
-        drawBall();
-        drawPaddle(player);
-        drawPaddle(computer);
+        // Draw ball
+        ctx.beginPath();
+        ctx.arc(ball.x, ball.y, ball.radius, 0, Math.PI * 2);
+        ctx.fillStyle = ball.color;
+        ctx.fill();
+        ctx.closePath();
+        
+        // Draw paddles
+        ctx.fillStyle = player.color;
+        ctx.fillRect(player.x, player.y, player.width, player.height);
+        
+        ctx.fillStyle = computer.color;
+        ctx.fillRect(computer.x, computer.y, computer.width, computer.height);
     }
     
     function gameUpdate() {
-        updatePaddles();
+        // Update player paddle position
+        player.y = mouseY - paddleHeight/2;
+        
+        // Update computer paddle
+        updateComputer();
+        
+        // Update ball
         updateBall();
+        
+        // Draw everything
         draw();
     }
     

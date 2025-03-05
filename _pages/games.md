@@ -22,6 +22,16 @@ Welcome to my games collection! Here you'll find various fun and interactive gam
         <h3><a href="/games/pong/">Pong</a></h3>
         <p>Classic two-player Pong game. Challenge a friend to a game of table tennis using your keyboard controls!</p>
     </div>
+    
+    <div class="game-card">
+        <h3><a href="/games/planet-genesis/">Planet Genesis</a></h3>
+        <p>Create and terraform your own planet from scratch. Adjust atmospheric conditions, sculpt terrain, and watch your world evolve!</p>
+    </div>
+    
+    <div class="game-card">
+        <h3><a href="/games/road-racer/">Road Racer</a></h3>
+        <p>Race around a track in this driving simulator. Use the WASD keys to control your car and complete laps as quickly as possible!</p>
+    </div>
 </div>
 
 More games coming soon!
