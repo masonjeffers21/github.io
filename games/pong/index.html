@@ -1,4 +1,4 @@
-<!DOCTYPE html> <html lang="en"> <head> <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <meta http-equiv="X-UA-Compatible" content="IE=edge"> <title> Pong | Mason Jeffers Portfolio </title> <meta name="author" content="Mason Jeffers"> <meta name="description" content="Welcome to my personal portfolio website. I am Mason Jeffers, an academic and developer showcasing my projects, research, and blog posts. "> <meta name="keywords" content="jekyll, jekyll-theme, academic-website, portfolio-website"> <link rel="stylesheet" href="/assets/css/bootstrap.min.css?a4b3f509e79c54a512b890d73235ef04"> <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/css/mdb.min.css" integrity="sha256-jpjYvU3G3N6nrrBwXJoVEYI/0zw8htfFnhT9ljN3JJw=" crossorigin="anonymous"> <link defer rel="stylesheet" href="/assets/css/academicons.min.css?f0b7046b84e425c55f3463ac249818f5"> <link defer rel="stylesheet" href="/assets/css/scholar-icons.css?62b2ac103a88034e6882a5be5f3e2772"> <link defer rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons&amp;display=swap"> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-github.css?591dab5a4e56573bf4ef7fd332894c99" media="" id="highlight_theme_light"> <link rel="shortcut icon" href="data:image/svg+xml,&lt;svg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20100%20100%22&gt;&lt;text%20y=%22.9em%22%20font-size=%2290%22&gt;%E2%9A%9B%EF%B8%8F&lt;/text&gt;&lt;/svg&gt;"> <link rel="stylesheet" href="/assets/css/main.css?d41d8cd98f00b204e9800998ecf8427e"> <link rel="canonical" href="https://masonjeffers21.github.io/games/pong/"> <script src="/assets/js/theme.js?9a0c749ec5240d9cda97bc72359a72c0"></script> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-native.css?5847e5ed4a4568527aa6cfab446049ca" media="none" id="highlight_theme_dark"> <script>
+<!DOCTYPE html> <html lang="en"> <head> <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <meta http-equiv="X-UA-Compatible" content="IE=edge"> <title> Pong | Mason Jeffers Portfolio </title> <meta name="author" content="Mason Jeffers"> <meta name="description" content="Welcome to my personal portfolio website. I am Mason Jeffers, an academic and developer showcasing my projects, research, and blog posts. "> <meta name="keywords" content="jekyll, jekyll-theme, academic-website, portfolio-website"> <link rel="stylesheet" href="/assets/css/bootstrap.min.css?a4b3f509e79c54a512b890d73235ef04"> <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/css/mdb.min.css" integrity="sha256-jpjYvU3G3N6nrrBwXJoVEYI/0zw8htfFnhT9ljN3JJw=" crossorigin="anonymous"> <link defer rel="stylesheet" href="/assets/css/academicons.min.css?f0b7046b84e425c55f3463ac249818f5"> <link defer rel="stylesheet" href="/assets/css/scholar-icons.css?62b2ac103a88034e6882a5be5f3e2772"> <link defer rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons&amp;display=swap"> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-github.css?591dab5a4e56573bf4ef7fd332894c99" media="" id="highlight_theme_light"> <link rel="shortcut icon" href="data:image/svg+xml,&lt;svg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20100%20100%22&gt;&lt;text%20y=%22.9em%22%20font-size=%2290%22&gt;%F0%9F%9A%80&lt;/text&gt;&lt;/svg&gt;"> <link rel="stylesheet" href="/assets/css/main.css?d41d8cd98f00b204e9800998ecf8427e"> <link rel="canonical" href="https://masonjeffers21.github.io/games/pong/"> <script src="/assets/js/theme.js?9a0c749ec5240d9cda97bc72359a72c0"></script> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-native.css?5847e5ed4a4568527aa6cfab446049ca" media="none" id="highlight_theme_dark"> <script>
     initTheme();
   </script> </head> <body class="fixed-top-nav "> <header> <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top" role="navigation"> <div class="container"> <a class="navbar-brand title font-weight-lighter" href="/"> Mason Jeffers Portfolio </a> <button class="navbar-toggler collapsed ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar top-bar"></span> <span class="icon-bar middle-bar"></span> <span class="icon-bar bottom-bar"></span> </button> <div class="collapse navbar-collapse text-right" id="navbarNav"> <ul class="navbar-nav ml-auto flex-nowrap"> <li class="nav-item "> <a class="nav-link" href="/">About </a> </li> <li class="nav-item "> <a class="nav-link" href="/projects/">Projects </a> </li> <li class="nav-item "> <a class="nav-link" href="/cv/">CV </a> </li> <li class="nav-item active"> <a class="nav-link" href="/games/">Games <span class="sr-only">(current)</span> </a> </li> <li class="toggle-container"> <button id="light-toggle" title="Change theme"> <i class="ti ti-sun-moon" id="light-toggle-system"></i> <i class="ti ti-moon-filled" id="light-toggle-dark"></i> <i class="ti ti-sun-filled" id="light-toggle-light"></i> </button> </li> </ul> </div> </div> </nav> <progress id="progress" value="0"> <div class="progress-container"> <span class="progress-bar"></span> </div> </progress> </header> <div class="container mt-5" role="main"> <div class="post"> <header class="post-header"> <h1 class="post-title">Pong</h1> <p class="post-description"></p> </header> <article> <div class="breadcrumb"> <a href="/games/">Games</a> &gt; Pong </div> <div class="game-container"> <div class="game-header"> <h2>Pong</h2> <div class="game-stats"> <span>Score: <span id="score">0 - 0</span></span> </div> </div> <div class="game-mode-selector"> <div id="difficultySelector" class="difficulty-selector"> <button class="difficulty-btn active" data-difficulty="easy">Easy</button> <button class="difficulty-btn" data-difficulty="medium">Medium</button> <button class="difficulty-btn" data-difficulty="hard">Hard</button> </div> </div> <div class="game-controls"> <button id="startGame">Start Game</button> <button id="resetGame">Reset</button> </div> <div class="game-instructions"> <p>Move your paddle by moving your cursor/mouse up and down</p> <p>Try to beat the computer!</p> </div> <canvas id="pongCanvas" width="800" height="400"></canvas> </div> <style>.breadcrumb{margin-bottom:20px;color:#666}.breadcrumb a{color:#2196f3;text-decoration:none}.breadcrumb a:hover{text-decoration:underline}.game-container{max-width:800px;margin:0 auto;padding:20px;text-align:center}.game-header{margin-bottom:20px}.game-stats{display:flex;justify-content:center;gap:20px;margin:10px 0;font-size:1.2em;font-weight:bold}.game-mode-selector{margin-bottom:20px}.difficulty-selector{display:flex;justify-content:center;gap:10px;margin:10px 0}.difficulty-btn{padding:8px 16px;font-size:16px;cursor:pointer;background-color:#f8f9fa;color:#2196f3;border:2px solid #2196f3;border-radius:4px;transition:all .2s}.difficulty-btn:hover{background-color:#e3f2fd}.difficulty-btn.active{background-color:#2196f3;color:white}.game-controls{margin-bottom:20px}.game-controls button{margin:0 10px;padding:8px 16px;font-size:16px;cursor:pointer;background-color:#007bff;color:white;border:0;border-radius:4px}.game-controls button:hover{background-color:#0056b3}.game-instructions{margin-bottom:20px;padding:10px;background-color:#f8f9fa;border-radius:4px}.game-instructions p{margin:5px 0;color:#666}#pongCanvas{background-color:#000;border-radius:4px;box-shadow:0 2px 4px rgba(0,0,0,0.2);cursor:none}@media(max-width:800px){#pongCanvas{width:100%;height:auto}}</style> <script>
 document.addEventListener('DOMContentLoaded', function() {
@@ -14,7 +14,6 @@ document.addEventListener('DOMContentLoaded', function() {
         x: canvas.width / 2,
         y: canvas.height / 2,
         radius: 10,
-        speed: 5,
         dx: 5,
         dy: 5,
         color: '#fff'
@@ -22,7 +21,6 @@ document.addEventListener('DOMContentLoaded', function() {
     
     const paddleHeight = 100;
     const paddleWidth = 10;
-    const paddleSpeed = 8;
     
     const player = {
         x: 0,
@@ -47,22 +45,22 @@ document.addEventListener('DOMContentLoaded', function() {
     let difficulty = 'easy';
     let mouseY = canvas.height / 2;
     
-    // AI settings for different difficulties
-    const aiSettings = {
-        easy: { 
-            reactionTime: 0.2,
-            accuracy: 0.8,
-            predictionFactor: 0.3
+    // Game settings
+    const settings = {
+        easy: {
+            ballSpeed: 4,
+            computerSpeed: 3,
+            computerAccuracy: 0.7
         },
-        medium: { 
-            reactionTime: 0.15,
-            accuracy: 0.9,
-            predictionFactor: 0.5
+        medium: {
+            ballSpeed: 6,
+            computerSpeed: 5,
+            computerAccuracy: 0.85
         },
-        hard: { 
-            reactionTime: 0.1,
-            accuracy: 0.95,
-            predictionFactor: 0.7
+        hard: {
+            ballSpeed: 8,
+            computerSpeed: 8,
+            computerAccuracy: 0.95
         }
     };
     
@@ -78,10 +76,8 @@ document.addEventListener('DOMContentLoaded', function() {
     // Mouse/touch event listeners
     function handlePointerMove(e) {
         const rect = canvas.getBoundingClientRect();
-        const scaleX = canvas.width / rect.width;
         const scaleY = canvas.height / rect.height;
         
-        // Handle both mouse and touch events
         const clientY = e.type.includes('touch') ? e.touches[0].clientY : e.clientY;
         mouseY = (clientY - rect.top) * scaleY;
         
@@ -91,69 +87,37 @@ document.addEventListener('DOMContentLoaded', function() {
     
     canvas.addEventListener('mousemove', handlePointerMove);
     canvas.addEventListener('touchmove', handlePointerMove, { passive: false });
-    
-    // Prevent scrolling on touch devices
     canvas.addEventListener('touchstart', (e) => e.preventDefault(), { passive: false });
     
-    // AI function with improved prediction
-    function updateAI() {
-        const settings = aiSettings[difficulty];
+    // Simple AI that follows the ball
+    function updateComputer() {
+        const currentSettings = settings[difficulty];
         
-        // Predict where the ball will be
-        let predictedY = ball.y;
-        if (ball.dx > 0) { // Only predict when ball is moving towards computer
-            const timeToReach = (canvas.width - ball.x) / ball.dx;
-            predictedY = ball.y + (ball.dy * timeToReach);
-            
-            // Add some randomness based on difficulty
-            const randomFactor = (1 - settings.accuracy) * 100;
-            predictedY += (Math.random() - 0.5) * randomFactor;
-            
-            // Bounce prediction
-            while (predictedY < 0 || predictedY > canvas.height) {
-                if (predictedY < 0) predictedY = -predictedY;
-                if (predictedY > canvas.height) predictedY = 2 * canvas.height - predictedY;
-            }
+        // Calculate target position (center of paddle)
+        const targetY = ball.y - (computer.height / 2);
+        
+        // Add some randomness to make it less perfect
+        const randomOffset = (Math.random() - 0.5) * (1 - currentSettings.computerAccuracy) * 50;
+        const finalTarget = targetY + randomOffset;
+        
+        // Move towards the target
+        const distance = finalTarget - computer.y;
+        const moveAmount = currentSettings.computerSpeed * Math.sign(distance);
+        
+        // Apply movement
+        computer.y += moveAmount;
+        
+        // Keep paddle within bounds
+        if (computer.y < 0) computer.y = 0;
+        if (computer.y + computer.height > canvas.height) {
+            computer.y = canvas.height - computer.height;
         }
-        
-        // Move towards predicted position with delay
-        const targetY = predictedY - (computer.height / 2);
-        const currentY = computer.y;
-        const distance = targetY - currentY;
-        
-        if (Math.abs(distance) > 5) {
-            const moveAmount = paddleSpeed * settings.reactionTime;
-            if (distance > 0) {
-                computer.y = Math.min(computer.y + moveAmount, canvas.height - computer.height);
-            } else {
-                computer.y = Math.max(computer.y - moveAmount, 0);
-            }
-        }
-    }
-    
-    // Game functions
-    function drawBall() {
-        ctx.beginPath();
-        ctx.arc(ball.x, ball.y, ball.radius, 0, Math.PI * 2);
-        ctx.fillStyle = ball.color;
-        ctx.fill();
-        ctx.closePath();
-    }
-    
-    function drawPaddle(paddle) {
-        ctx.fillStyle = paddle.color;
-        ctx.fillRect(paddle.x, paddle.y, paddle.width, paddle.height);
-    }
-    
-    function updatePaddles() {
-        // Player movement (cursor/mouse)
-        player.y = mouseY - paddleHeight/2;
-        
-        // Computer movement (AI)
-        updateAI();
     }
     
     function updateBall() {
+        const currentSettings = settings[difficulty];
+        
+        // Update ball position
         ball.x += ball.dx;
         ball.y += ball.dy;
         
@@ -166,7 +130,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (ball.x - ball.radius < player.x + player.width &&
             ball.y > player.y &&
             ball.y < player.y + player.height) {
-            ball.dx = -ball.dx;
+            ball.dx = Math.abs(ball.dx);
             // Add some randomness to the ball's vertical direction
             ball.dy += (Math.random() - 0.5) * 2;
         }
@@ -174,7 +138,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (ball.x + ball.radius > computer.x &&
             ball.y > computer.y &&
             ball.y < computer.y + computer.height) {
-            ball.dx = -ball.dx;
+            ball.dx = -Math.abs(ball.dx);
             // Add some randomness to the ball's vertical direction
             ball.dy += (Math.random() - 0.5) * 2;
         }
@@ -195,8 +159,9 @@ document.addEventListener('DOMContentLoaded', function() {
     function resetBall() {
         ball.x = canvas.width / 2;
         ball.y = canvas.height / 2;
-        ball.dx = -ball.dx;
-        ball.dy = Math.random() * 10 - 5;
+        const currentSettings = settings[difficulty];
+        ball.dx = (Math.random() > 0.5 ? 1 : -1) * currentSettings.ballSpeed;
+        ball.dy = (Math.random() * 2 - 1) * currentSettings.ballSpeed;
     }
     
     function draw() {
@@ -213,15 +178,32 @@ document.addEventListener('DOMContentLoaded', function() {
         ctx.stroke();
         ctx.setLineDash([]);
         
-        // Draw game objects
-        drawBall();
-        drawPaddle(player);
-        drawPaddle(computer);
+        // Draw ball
+        ctx.beginPath();
+        ctx.arc(ball.x, ball.y, ball.radius, 0, Math.PI * 2);
+        ctx.fillStyle = ball.color;
+        ctx.fill();
+        ctx.closePath();
+        
+        // Draw paddles
+        ctx.fillStyle = player.color;
+        ctx.fillRect(player.x, player.y, player.width, player.height);
+        
+        ctx.fillStyle = computer.color;
+        ctx.fillRect(computer.x, computer.y, computer.width, computer.height);
     }
     
     function gameUpdate() {
-        updatePaddles();
+        // Update player paddle position
+        player.y = mouseY - paddleHeight/2;
+        
+        // Update computer paddle
+        updateComputer();
+        
+        // Update ball
         updateBall();
+        
+        // Draw everything
         draw();
     }
     
