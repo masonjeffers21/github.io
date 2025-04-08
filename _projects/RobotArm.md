@@ -2,44 +2,96 @@
 layout: page
 title: Robot Arm
 description: Restoration and software integration of a 6-axis robot arm.
-img: assets/img/robot_arm/robot_arm.JPG
+img: assets/img/robot_arm/robot_arm_project_page.png
 importance: 1
-category: 
+category:
 related_publications: false
 ---
 
 **Introduction**
 
-I purchased a 6-axis robot arm through an online auction, acquiring it in an unknown condition. From the start, it was clear that the arm, while promising, needed a significant amount of restoration. Intrigued by its potential and driven by a passion for robotics, I set out to revive this machine, despite the uncertainty of its initial state.
+<div class="row">
+  <div class="col-sm-8">
+    <p>In 2025, I acquired a used 6-axis robot arm from a Procter & Gamble facility in Ohio through an industrial equipment auction. The arm, which was previously used in a manufacturing line, was purchased for $500. After winning the auction, I drove to the P&G facility to pick up the equipment, which included the robot arm, its controller, and various accessories. The project involves restoring the robot arm to operational condition and developing custom software to control it.</p>
+  </div>
+  <div class="col-sm-4">
+    <img src="{{ 'assets/img/robot_arm/robot_arm.JPG' | relative_url }}" alt="Robot Arm" class="img-fluid rounded z-depth-1">
+  </div>
+</div>
 
-**Setting Up**
+---
 
-The first step was to create a dedicated workspace and gather all necessary tools. I cleared a large workbench, ensuring adequate lighting and power access, and assembled essential equipment including a digital multimeter, oscilloscope, various sizes of hex keys, torque wrenches, and specialized lubricants. I carefully unboxed the arm, photographing each step of the process and creating detailed documentation of its initial state. The robot showed signs of extended storage - there was light surface corrosion on some exposed metal parts, and the cables had become stiff from age.
+## Setting Up
 
-I methodically inspected and documented every visible component. The arm's six joints were manually articulated to assess their range of motion and identify any concerning sounds or resistance. I tested each servo motor's electrical connections, checking for continuity and proper insulation. The controller box was opened and examined for any obvious damage or loose connections. Throughout this process, I maintained a detailed log of observations, creating a comprehensive checklist of items that needed attention. My goal was to systematically inspect every component—from mechanical parts to electrical connections—and determine the root cause of its malfunction before attempting any repairs.
+The first step was to create a dedicated workspace and gather all necessary tools. I cleared a large workbench, ensuring adequate lighting and power access, and assembled essential equipment including a digital multimeter, oscilloscope, various sizes of hex keys, torque wrenches, and specialized lubricants. I carefully unboxed the arm, photographing each step of the process and creating detailed documentation of its initial state. The robot showed signs of extended storage—there was light surface corrosion on some exposed metal parts, and the cables had become stiff from age.
 
-**Troubleshooting and Disassembly**
+I methodically inspected and documented every visible component. The arm’s six joints were manually articulated to assess their range of motion and identify any concerning sounds or resistance. I tested each servo motor’s electrical connections, checking for continuity and proper insulation. The controller box was opened and examined for any obvious damage or loose connections. Throughout this process, I maintained a detailed log of observations, creating a comprehensive checklist of items that needed attention. My goal was to systematically inspect every component—from mechanical parts to electrical connections—and determine the root cause of its malfunction before attempting any repairs.
 
-Early diagnostics pointed to issues with the J2 axis, specifically irregular motion and concerning vibrations during operation. I began by disassembling this section of the robot, which led me to focus on the harmonic drive and the AC servo motor. The harmonic drive showed signs of wear and contamination - the wave generator exhibited minor scoring marks, while the flex spline contained accumulated debris that impeded smooth operation. I carefully took apart the J2 axis, cleaning the harmonic drive thoroughly using specialized solvents to remove debris and hardened grease, followed by applying fresh SHF-32 lubricant to ensure proper operation. The circular spline teeth required particular attention, as they showed signs of uneven wear that needed careful cleaning and inspection.
+---
 
-Similarly, I disassembled and cleaned the AC servo motor, discovering that the bearings had accumulated significant debris and the encoder disk showed signs of contamination. I methodically addressed each component - cleaning the stator windings, replacing the bearings, and carefully realigning the encoder disk to ensure accurate position feedback. The process of reassembly required precise torque specifications for the mounting bolts and careful alignment of the motor shaft with the harmonic drive input.
+## Troubleshooting and Disassembly
+
+Early diagnostics pointed to issues with the J2 axis, specifically irregular motion and concerning vibrations during operation. I began by disassembling this section of the robot, which led me to focus on the harmonic drive and the AC servo motor. The harmonic drive showed signs of wear and contamination—the wave generator exhibited minor scoring marks, while the flex spline contained accumulated debris that impeded smooth operation. I carefully took apart the J2 axis, cleaning the harmonic drive thoroughly using specialized solvents to remove debris and hardened grease, followed by applying fresh SHF-32 lubricant to ensure proper operation. The circular spline teeth required particular attention, as they showed signs of uneven wear that needed careful cleaning and inspection.
+
+Similarly, I disassembled and cleaned the AC servo motor, discovering that the bearings had accumulated significant debris and the encoder disk showed signs of contamination. I methodically addressed each component—cleaning the stator windings, replacing the bearings, and carefully realigning the encoder disk to ensure accurate position feedback. The process of reassembly required precise torque specifications for the mounting bolts and careful alignment of the motor shaft with the harmonic drive input.
 
 This restoration process involved a fair amount of trial and error, particularly in achieving the correct preload on the harmonic drive and proper encoder alignment. I developed a systematic testing procedure, gradually increasing the range of motion while monitoring current draw and vibration levels. Through iterative adjustments and careful calibration of each component, I was able to restore the axis to smooth, reliable operation with minimal backlash and proper position accuracy.
 
-**Communication with the Controller**
+---
 
-After resolving the mechanical issues, I turned my attention to the robot's control systems. The controller uses a proprietary communication protocol, requiring careful reverse engineering to establish reliable connectivity. I began by analyzing the electrical signals using an oscilloscope to understand the timing and voltage levels of the communication interface.
+## Communication with the Controller
 
-My current efforts are focused on establishing reliable communication with the controller through multiple approaches. For TCP/IP communication, I implemented a custom socket server that listens on port 502, matching the controller's expected configuration. I developed a Python client that can send movement commands and receive position feedback using a structured message format. For serial communication, I experimented with different baud rates and data formats through the RS-232 interface, eventually achieving stable communication at 115200 baud with 8N1 configuration.
+After resolving the mechanical issues, I turned my attention to the robot’s control systems. The controller uses a proprietary communication protocol, requiring careful reverse engineering to establish reliable connectivity. I began by analyzing the electrical signals using an oscilloscope to understand the timing and voltage levels of the communication interface.
 
-While the integration poses significant challenges—such as configuring network settings, handling packet loss, and ensuring consistent data transmission—I've made substantial progress. I implemented error detection using CRC checksums, added timeout mechanisms for failed commands, and created a robust state machine to manage the connection lifecycle. The project continues to evolve as I work toward full remote control and software integration, with the ultimate goal of implementing a high-level API that abstracts the complexity of the underlying communication protocols.
+My current efforts are focused on establishing reliable communication with the controller through multiple approaches:
+
+- **TCP/IP Communication:** Implemented a custom socket server listening on port 502 (Modbus/TCP), and a Python client for sending movement commands and receiving position feedback.  
+- **Serial Communication:** Experimented with RS‑232 at 115200 baud, 8N1, tuning baud rates and framing to achieve stable data exchange.  
+- **RT Toolbox2 Integration:**  
+  - Configured Mitsubishi’s RT Toolbox2 software to communicate over TCP/IP with the CR2DA‑700 controller at IP 192.168.0.20.  
+  - Developed MELFA BASIC scripts and uploaded them via RT Toolbox2’s project manager. These scripts include custom movement routines, homing sequences, and I/O diagnostics.  
+  - Automated the deployment process: on startup, the host PC launches an RT Toolbox2 API session, loads the latest MELFA BASIC program, and triggers a self‑test routine on each axis.  
+  - Utilized RT Toolbox2’s online monitor to log real‑time joint angles, motor currents, and error codes—feeding this telemetry back into my Python dashboard for visualization and alerting.  
+- **Error Handling:** Added CRC checksums, timeout/retry mechanisms, and a state machine to manage the connection lifecycle.
+
+While the integration poses challenges—such as configuring network settings, handling packet loss, and ensuring consistent data transmission—I’ve made substantial progress toward a high‑level API that abstracts these complexities.
+
+---
+
+
+## Achievements & Technical Specs
+
+**Key Achievements to Date:**
+- **Mechanical Restoration:** Complete refurbishment of all six axes, especially the J2 harmonic drive and AC servo motor.
+- **Software Integration:** Functional TCP/IP & RS‑232 clients with robust error handling and calibration routines.
+- **Testing & Calibration:** Iterative motion tests, current monitoring, and vibration analysis for reliable, backlash‑free operation.
+
+**Technical Specifications:**
+- **6‑Axis Articulation:** Independently driven joints for full 3D workspace coverage.
+- **Harmonic Drive:** High‑precision wave generator and flex spline in the J2 axis.
+- **Servo Motors:** AC servos with custom bearing replacements and encoder realignment.
+- **Controller Interfaces:** Dual-mode Ethernet (Modbus/TCP) and RS‑232 serial connectivity.
+- **Documentation:** Detailed logs, calibration checklists, and step-by-step photographs.
+
+---
+
+## Future Directions
+
+1. **Custom Control Interface**  
+   - Web‑based dashboard and manual joystick control.  
+2. **High‑Level API**  
+   - RESTful endpoints for motion commands, sensor data, and status monitoring.  
+3. **Path Planning & Collision Detection**  
+   - Integration of motion planning libraries (e.g., MoveIt!) for safe, autonomous trajectories.  
+4. **Computer Vision Integration**  
+   - Mounting an Intel RealSense camera for object detection, human tracking, and adaptive task execution.  
+5. **Telemetry & Analytics**  
+   - Real‑time data logging of position, torque, and error states for predictive maintenance and performance tuning.  
+6. **Community Engagement**  
+   - Publishing tutorials, code samples, and collaborating with other robotics enthusiasts.
+
+---
 
 **Conclusion**
 
-Restoring this robot arm has been a challenging yet deeply rewarding experience. Each step, from the initial setup through the detailed troubleshooting of the J2 axis, has enriched my understanding of robotics and control systems. The mechanical restoration process taught me valuable lessons about precision engineering, particularly in handling delicate components like the harmonic drive and servo motors. The careful calibration of the J2 axis required developing a systematic approach to mechanical alignment and testing, which has significantly improved my technical troubleshooting skills.
-
-The software integration phase has presented its own unique challenges. Working with TCP/IP communication protocols has deepened my understanding of network programming and real-time control systems. I've implemented custom protocols for command transmission and feedback processing, while also developing safety protocols to ensure reliable operation. The ongoing work on the controller interface has involved creating robust error handling systems and implementing position feedback loops for precise movement control.
-
-Looking forward, I plan to expand the project in several directions. First, I'm developing a custom control interface that will allow for both manual and automated operation modes. Second, I'm working on implementing advanced features like path planning and collision detection. Finally, I'm exploring the integration of computer vision systems to enable more sophisticated interaction with the environment. These enhancements will transform the robot from a basic motion platform into a fully capable automation system.
-
-I remain dedicated to refining the communication interface with the controller over TCP/IP, confident that these efforts will eventually lead to a fully operational and integrated robotic system. The knowledge gained from this project has not only advanced my technical skills but has also provided valuable insights into industrial robotics and automation systems.
+Restoring and integrating this robot arm has been an in‑depth exploration of mechanical engineering, electronics diagnostics, and software development. From harmonic drive calibration to protocol reverse engineering, every phase has deepened my expertise in industrial robotics. As the project evolves, I aim to transform this platform into a versatile, intelligent automation system—stay tuned for more updates and demonstrations!

@@ -605,3 +605,13 @@ jsonresume:
   - languages
   - interests
   - references
+
+navbar_links:
+  - title: Home
+    url: /
+  - title: Projects
+    url: /projects/
+  - title: Games
+    url: /games/
+  - title: 3D Portfolio
+    url: /3d-portfolio/

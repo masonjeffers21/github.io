@@ -4,34 +4,24 @@ title: Games
 permalink: /games/
 nav: true
 nav_order: 5
+description: A collection of browser-based games
 ---
 
 # Games Collection
 
-Welcome to my games collection! Here you'll find various fun and interactive games that you can play directly in your browser.
+Welcome to my games collection! Here you'll find a variety of interactive games I've developed. Feel free to try them out and let me know what you think!
 
 ## Available Games
 
 <div class="games-grid">
-    <div class="game-card">
-        <h3><a href="/games/memory-card-game/">Memory Card Game</a></h3>
-        <p>Test your memory with this classic card matching game. Match pairs of cards while trying to use the fewest moves and time possible.</p>
-    </div>
-    
-    <div class="game-card">
-        <h3><a href="/games/pong/">Pong</a></h3>
-        <p>Classic two-player Pong game. Challenge a friend to a game of table tennis using your keyboard controls!</p>
-    </div>
-    
-    <div class="game-card">
-        <h3><a href="/games/planet-genesis/">Planet Genesis</a></h3>
-        <p>Create and terraform your own planet from scratch. Adjust atmospheric conditions, sculpt terrain, and watch your world evolve!</p>
-    </div>
-    
-    <div class="game-card">
-        <h3><a href="/games/road-racer/">Road Racer</a></h3>
-        <p>Race around a track in this driving simulator. Use the WASD keys to control your car and complete laps as quickly as possible!</p>
-    </div>
+    <a href="{{ '/games/pong/' | relative_url }}" class="game-card">
+        <h3>Pong</h3>
+        <p>A classic arcade game where you control a paddle to bounce a ball back and forth.</p>
+    </a>
+    <a href="{{ '/games/memory-card-game/' | relative_url }}" class="game-card">
+        <h3>Memory Card Game</h3>
+        <p>Test your memory by matching pairs of cards in this classic memory game.</p>
+    </a>
 </div>
 
 More games coming soon!
@@ -50,24 +40,19 @@ More games coming soon!
     padding: 20px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     transition: transform 0.2s;
+    text-decoration: none;
+    display: block;
+    color: inherit;
 }
 
 .game-card:hover {
     transform: translateY(-2px);
+    text-decoration: none;
 }
 
 .game-card h3 {
     margin-top: 0;
     color: #2196F3;
-}
-
-.game-card h3 a {
-    color: inherit;
-    text-decoration: none;
-}
-
-.game-card h3 a:hover {
-    text-decoration: underline;
 }
 
 .game-card p {
