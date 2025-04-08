@@ -25,7 +25,7 @@ ninja.data = [{
           },
         },{id: "nav-games",
           title: "Games",
-          description: "",
+          description: "A collection of browser-based games",
           section: "Navigation",
           handler: () => {
             window.location.href = "/games/";
@@ -393,11 +393,21 @@ ninja.data = [{
             },},{id: "news-a-simple-inline-announcement-with-markdown-emoji-sparkles-smile",
           title: 'A simple inline announcement with Markdown emoji! :sparkles: :smile:',
           description: "",
-          section: "News",},{id: "projects-robot-arm",
+          section: "News",},{id: "projects-homelab-infrastructure",
+          title: 'Homelab Infrastructure',
+          description: "Building and maintaining a homelab environment using Proxmox VE with various services including Home Assistant, media servers, and development environments.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/Homelab/";
+            },},{id: "projects-robot-arm",
           title: 'Robot Arm',
           description: "Restoration and software integration of a 6-axis robot arm.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/RobotArm/";
+            },},{id: "projects-personal-website",
+          title: 'Personal Website',
+          description: "Development of a personal website using Jekyll and GitHub Pages.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/WebsiteDevelopment/";
             },},{
         id: 'social-email',
         title: 'email',
