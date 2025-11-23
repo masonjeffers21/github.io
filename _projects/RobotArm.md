@@ -89,7 +89,61 @@ While the integration poses challenges—such as configuring network settings, h
 
 **[VIDEO DEMO NEEDED: Add 1-2 minute video showing robot in operation - movements, calibration, control interface]**
 
-**[SYSTEM DIAGRAM NEEDED: Create architecture diagram showing: Robot → Controller → Communication Layer → Python/ROS Interface]**
+### System Architecture
+
+```
+┌─────────────────────────────────────────────────────────────────┐
+│                    🔧 HARDWARE LAYER                            │
+├─────────────────────────────────────────────────────────────────┤
+│  Mitsubishi RV-6SDL-S15        ←→    CR2DA-700 Controller      │
+│  (6-Axis Robot Arm)                  (Servo Drives & Logic)    │
+│  • 6kg payload, 900mm reach          • Real-time motion control│
+│  • Harmonic drives, AC servos        • Safety interlocks       │
+└──────────────────┬──────────────────────────┬───────────────────┘
+                   │                          │
+        ┌──────────▼──────────┐    ┌─────────▼──────────┐
+        │  Ethernet (TCP/IP)  │    │   RS-232 Serial    │
+        │  192.168.0.20:502   │    │   115200 baud      │
+        │  Modbus/TCP         │    │   8N1              │
+        └──────────┬──────────┘    └─────────┬──────────┘
+┌──────────────────┴───────────────────────┴────────────────────┐
+│              🔌 COMMUNICATION LAYER                            │
+│  • CRC checksums  • Timeout/retry  • State machine mgmt       │
+└──────────────────┬────────────────────────────────────────────┘
+                   │
+        ┌──────────▼──────────────────────────┐
+        │    💻 SOFTWARE INTEGRATION          │
+        ├─────────────────────────────────────┤
+        │  RT Toolbox2    Python Interface    │
+        │  • MELFA BASIC  • Socket client     │
+        │  • Monitoring   • Serial comm       │
+        │  • Diagnostics  • Error handling    │
+        │                                     │
+        │  ROS Integration (Future)           │
+        │  • URDF model  • MoveIt! planning   │
+        └──────────────────┬──────────────────┘
+                           │
+        ┌──────────────────▼──────────────────┐
+        │    👤 USER INTERFACE LAYER          │
+        ├─────────────────────────────────────┤
+        │  • Web Dashboard (telemetry)        │
+        │  • Joystick Control (manual)        │
+        │  • RESTful API (automation)         │
+        └─────────────────────────────────────┘
+
+🏭 Industrial Controls Context (Siemens PCS7 DCS):
+   • Communication protocols (Profibus/Profinet concepts)
+   • SCADA architecture patterns
+   • Safety systems design (SIL-rated)
+   • Real-time control loops
+```
+
+**Key Architecture Features:**
+- **Modular Design**: Communication layer abstracts hardware details
+- **Dual Interface**: Ethernet (primary) and Serial (diagnostic/backup)
+- **Robust Error Handling**: CRC validation, timeouts, retry logic
+- **Scalable**: Designed for future ROS/MoveIt! integration
+- **DCS-Informed**: Safety and reliability principles from industrial automation
 
 **Key Achievements to Date:**
 - **Mechanical Restoration:** Complete refurbishment of all six axes, especially the J2 harmonic drive and AC servo motor.
