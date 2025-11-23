@@ -2,19 +2,19 @@
 # Site settings
 # -----------------------------------------------------------------------------
 
-title: "Mason Jeffers Portfolio" # the website title; if blank, your full name will be used instead
+title: "Mason Jeffers | R&D Automation Engineer" # the website title; if blank, your full name will be used instead
 first_name: Mason
 middle_name:
 last_name: Jeffers
 contact_note: >
   For inquiries, please email me at <a href="mailto:masonjeffers0@gmail.com">masonjeffers0@gmail.com</a>.
 description: >
-  Welcome to my personal portfolio website. I am Mason Jeffers, an academic and developer showcasing my projects, research, and blog posts.
+  Mason Jeffers - R&D Automation Engineer specializing in robotics, industrial control systems, and advanced manufacturing. Experience with Siemens PCS7 DCS, ROS robotics, and automation systems integration.
 footer_text: >
   <!--Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with the <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.-->
   <!--Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.-->
   <!--Photos from <a href="https://unsplash.com" target="_blank">Unsplash</a>.-->
-keywords: jekyll, jekyll-theme, academic-website, portfolio-website
+keywords: automation engineer, robotics engineer, ROS, Siemens PCS7, DCS, industrial automation, manufacturing, control systems
 lang: en
 icon: 🚀
 
@@ -42,7 +42,7 @@ repo_trophies:
 # will use title and url fields
 # Take a look to https://github.com/jekyll/jekyll-feed for more customization
 
-rss_icon: true
+rss_icon: false
 
 # -----------------------------------------------------------------------------
 # Layout
@@ -91,10 +91,10 @@ lsi: false # produce an index for related posts
 
 # Pagination
 pagination:
-  enabled: true
+  enabled: false
 
 related_blog_posts:
-  enabled: true
+  enabled: false
   max_related: 5
 
 # Giscus comments (RECOMMENDED)
@@ -115,13 +115,8 @@ giscus:
 disqus_shortname: al-folio # put your disqus shortname
 
 # External sources.
-external_sources:
-  - name: medium.com
-    rss_url: https://medium.com/@al-folio/feed
-  - name: Google Blog
-    posts:
-      - url: https://blog.google/technology/ai/google-gemini-update-flash-ai-assistant-io-2024/
-        published_date: 2024-05-14
+# Removed - not using external blog sources
+external_sources: []
 
 # -----------------------------------------------------------------------------
 # Newsletter
@@ -611,7 +606,7 @@ navbar_links:
     url: /
   - title: Projects
     url: /projects/
-  - title: Games
-    url: /games/
-  - title: 3D Portfolio
-    url: /3d-portfolio/
+  - title: About
+    url: /about/
+  - title: CV
+    url: /cv/
