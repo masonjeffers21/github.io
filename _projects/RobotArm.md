@@ -12,12 +12,36 @@ related_publications: false
 
 <div class="row">
   <div class="col-sm-8">
-    <p>In 2025, I acquired a used 6-axis robot arm from a Procter & Gamble facility in Ohio through an industrial equipment auction. The arm, which was previously used in a manufacturing line, was purchased for $500. After winning the auction, I drove to the P&G facility to pick up the equipment, which included the robot arm, its controller, and various accessories. The project involves restoring the robot arm to operational condition and developing custom software to control it.</p>
+    <p>In 2025, I acquired a used 6-axis Mitsubishi RV-6SDL-S15 industrial robot arm from a Procter & Gamble facility in Ohio through an industrial equipment auction for $500. Previously deployed in a high-volume manufacturing line, this industrial-grade robot represents a unique opportunity to build hands-on expertise in robotics control systems, automation integration, and R&D prototyping.</p>
+    <p>This project bridges production automation experience with advanced robotics research—combining mechanical restoration, controls engineering, and software integration to create a versatile platform for exploring automation concepts directly applicable to advanced manufacturing and R&D environments.</p>
   </div>
   <div class="col-sm-4">
     <img src="{{ 'assets/img/robot_arm/robot_arm.JPG' | relative_url }}" alt="Robot Arm" class="img-fluid rounded z-depth-1">
   </div>
 </div>
+
+### Technical Specifications
+
+| Specification | Details |
+|--------------|---------|
+| **Model** | Mitsubishi RV-6SDL-S15 |
+| **Axes** | 6 (J1-J6 fully articulated) |
+| **Reach** | ~900mm (35.4") working radius |
+| **Payload** | 6kg (13.2 lbs) rated capacity |
+| **Repeatability** | ±0.02mm (industrial precision) |
+| **Controller** | Mitsubishi CR2DA-700 |
+| **Communication** | Ethernet (Modbus/TCP), RS-232 Serial |
+| **Drive System** | AC Servo motors with harmonic drives |
+| **Power** | 200-240V AC, 3-phase |
+| **Application** | Originally: P&G manufacturing line |
+| **Acquisition** | 2025, Industrial auction ($500) |
+
+### Project Status
+
+**Current Phase:** Software integration and control system development
+**Timeline:** 6+ months of active restoration and development
+**Status:** Mechanically operational, actively developing high-level control interface
+**Next Milestone:** ROS MoveIt! integration for motion planning
 
 ---
 
@@ -41,7 +65,9 @@ This restoration process involved a fair amount of trial and error, particularly
 
 ## Communication with the Controller
 
-After resolving the mechanical issues, I turned my attention to the robot’s control systems. The controller uses a proprietary communication protocol, requiring careful reverse engineering to establish reliable connectivity. I began by analyzing the electrical signals using an oscilloscope to understand the timing and voltage levels of the communication interface.
+After resolving the mechanical issues, I turned my attention to the robot's control systems. The controller uses a proprietary communication protocol, requiring careful reverse engineering to establish reliable connectivity. I began by analyzing the electrical signals using an oscilloscope to understand the timing and voltage levels of the communication interface.
+
+**Leveraging Industrial Controls Experience:** My professional background with Siemens PCS7 DCS systems proved invaluable in this phase. Experience with industrial communication protocols (Profibus, Profinet), SCADA architectures, and safety-rated control systems directly informed my approach to interfacing with the Mitsubishi controller. The concepts of deterministic communication, real-time control loops, and safety interlocking from DCS engineering translate directly to robotic control systems.
 
 My current efforts are focused on establishing reliable communication with the controller through multiple approaches:
 
@@ -60,6 +86,10 @@ While the integration poses challenges—such as configuring network settings, h
 
 
 ## Achievements & Technical Specs
+
+**[VIDEO DEMO NEEDED: Add 1-2 minute video showing robot in operation - movements, calibration, control interface]**
+
+**[SYSTEM DIAGRAM NEEDED: Create architecture diagram showing: Robot → Controller → Communication Layer → Python/ROS Interface]**
 
 **Key Achievements to Date:**
 - **Mechanical Restoration:** Complete refurbishment of all six axes, especially the J2 harmonic drive and AC servo motor.
@@ -92,6 +122,20 @@ While the integration poses challenges—such as configuring network settings, h
 
 ---
 
+**Code Repository**
+
+**[GITHUB LINK NEEDED: Add link to public repository with Python control scripts, ROS packages, communication protocols]**
+
+Example code structure:
+- `robot_control/`: Python modules for TCP/IP and serial communication
+- `ros_workspace/`: ROS packages for robot interface
+- `config/`: Controller configuration files
+- `docs/`: Technical documentation and calibration procedures
+
+---
+
 **Conclusion**
 
-Restoring and integrating this robot arm has been an in‑depth exploration of mechanical engineering, electronics diagnostics, and software development. From harmonic drive calibration to protocol reverse engineering, every phase has deepened my expertise in industrial robotics. As the project evolves, I aim to transform this platform into a versatile, intelligent automation system—stay tuned for more updates and demonstrations!
+Restoring and integrating this robot arm has been an in‑depth exploration of mechanical engineering, electronics diagnostics, and software development. From harmonic drive calibration to protocol reverse engineering, every phase has deepened my expertise in industrial robotics.
+
+**Relevance to R&D Automation Engineering:** This project demonstrates end-to-end capability in automation systems—from mechanical understanding to controls engineering to software integration. The iterative R&D methodology, documentation rigor, and cross-functional technical skills mirror the requirements of advanced manufacturing automation roles.
