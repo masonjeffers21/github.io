@@ -30,7 +30,12 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/games/";
           },
-        },{id: "projects-homelab-infrastructure",
+        },{id: "projects-unmanned-aerial-systems",
+          title: 'Unmanned Aerial Systems',
+          description: "Defense counter-UAS engineering and university rocketry drone payload development.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/Drones/";
+            },},{id: "projects-homelab-infrastructure",
           title: 'Homelab Infrastructure',
           description: "Building and maintaining a homelab environment using Proxmox VE with various services including Home Assistant, media servers, and development environments.",
           section: "Projects",handler: () => {
