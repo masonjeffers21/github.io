@@ -1,12 +1,12 @@
 {
   "basics": {
     "name": "Mason Jeffers",
-    "label": "Engineer",
+    "label": "Control Systems Engineer",
     "image": "",
     "email": "masonjeffers0@gmail.com",
     "phone": "(334) 449-2423",
     "url": "https://masonjeffers.com",
-    "summary": "Mechanical engineer with experience in distributed control systems and defense industry design. Skilled in 3D design, CNC manufacturing, and robotic systems integration.",
+    "summary": "Control Systems Engineer at Siemens specializing in PCS7 distributed control systems for industrial automation, with prior experience in defense unmanned systems at SCI Technology. My career spans production-scale control systems, defense platform engineering, and advanced robotics R&D. I bridge defense systems engineering, production automation, and robotics innovation—thriving at the intersection of mechanical design, control systems, and software integration.",
     "location": {
       "address": "",
       "postalCode": "",
@@ -52,8 +52,11 @@
   ],
   "education": [
     {
-      "institution": "Auburn University", 
-      "area": "Mechanical Engineering"
+      "institution": "Auburn University",
+      "studyType": "Bachelor of Science",
+      "area": "Mechanical Engineering",
+      "startDate": "",
+      "endDate": "2023"
     }
   ],
   "skills": [
@@ -62,8 +65,8 @@
       "level": "Professional",
       "keywords": [
         "Siemens PCS7 DCS",
+        "STEP 7/TIA Portal PLC Programming",
         "SCADA/HMI Development",
-        "PLC Programming",
         "Safety Systems (SIL-rated)",
         "Profibus/Profinet/Modbus",
         "Process Automation",
@@ -125,7 +128,7 @@
     {
       "name": "FAA Part 107 Remote Pilot Certificate",
       "issuer": "Federal Aviation Administration",
-      "date": "",
+      "date": "2021",
       "url": ""
     }
   ],
@@ -144,16 +147,17 @@
       "keywords": ["Robotics", "ROS", "Python", "Industrial Automation", "Motion Control", "Machine Vision"]
     },
     {
-      "name": "Aeroguard Counter-UAS System",
-      "summary": "Mechanical design and integration engineering for defense counter-unmanned aerial system platform at SCI Technology. Contributed to rapid R&D prototyping and cross-functional system development.",
+      "name": "Unmanned Aerial Systems",
+      "summary": "Defense counter-UAS engineering and university rocketry drone payload development spanning both professional and academic experience in unmanned systems.",
       "highlights": [
-        "Mechanical component design for counter-UAS defense platform using SolidWorks CAD",
-        "Cross-functional collaboration with electrical, software, and systems engineering teams",
+        "Auburn University Rocketry Association (2019-2023): Designed autonomous quadcopter payload for rocket deployment, parachute descent, and soil sample collection",
+        "SCI Technology Aeroguard (2021-2023): Mechanical design engineering for counter-UAS defense platform with cross-functional system integration",
+        "Compact packaging design: Quadcopter with folding mechanisms to fit tubular rocket body",
         "Applied DFA/DFM principles to defense unmanned systems in iterative R&D environment",
-        "Supported prototype builds and design validation for operational deployment"
+        "FAA Part 107 certified for UAS operations and flight dynamics"
       ],
-      "url": "/projects/aeroguard/",
-      "keywords": ["Defense Systems", "UAS", "CAD Design", "System Integration", "Counter-UAS"]
+      "url": "/projects/drones/",
+      "keywords": ["UAS", "Defense Systems", "Autonomous Systems", "Robotics", "Mechanical Design", "System Integration"]
     },
     {
       "name": "Homelab Infrastructure",
@@ -165,6 +169,18 @@
       ],
       "url": "/projects/homelab/",
       "keywords": ["Docker", "Proxmox", "Linux", "Networking"]
+    },
+    {
+      "name": "Personal Portfolio Website",
+      "summary": "Developed personal website using Jekyll static site generator and GitHub Pages to showcase engineering projects, technical skills, and professional experience.",
+      "highlights": [
+        "Built with Jekyll framework and al-folio theme for clean, responsive design",
+        "Automated deployment via GitHub Actions CI/CD pipeline",
+        "Custom project pages with technical documentation and imagery",
+        "Integrated JSON Resume standard for structured CV data"
+      ],
+      "url": "https://masonjeffers21.github.io",
+      "keywords": ["Jekyll", "GitHub Pages", "Web Development", "CI/CD", "HTML/CSS"]
     }
   ]
 }

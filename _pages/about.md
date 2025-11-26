@@ -80,16 +80,10 @@ This convergence of **defense systems engineering**, **production automation**, 
 - Rapid prototyping (3D printing, additive manufacturing)
 - End-effector and fixture design
 
-### Career Focus
+### Education
 
-I'm pursuing opportunities in **R&D automation engineering**, **advanced manufacturing**, and **defense technology** where I can bridge industrial controls expertise with robotics innovation and operational systems thinking. My ideal role combines:
+**B.S. Mechanical Engineering, Auburn University**
+### Certifications
 
-- Robotic systems development and integration (automation cells, end-effector design, vision-guided systems)
-- Manufacturing automation and process optimization
-- Cross-functional technical collaboration (mechanical, electrical, software, systems)
-- R&D methodology with rapid prototyping and iterative validation
-- Defense technology, unmanned systems, or high-reliability applications
-- Technical integration roles supporting operational deployment
-
-**Education:** B.S. Mechanical Engineering, Auburn University
-**Certifications:** FAA Part 107 Remote Pilot Certificate
+**FAA Part 107 Remote Pilot Certificate**
+**GMP Certification**
