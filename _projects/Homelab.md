@@ -3,7 +3,7 @@ layout: page
 title: Homelab Infrastructure
 description: Building and maintaining a homelab environment using Proxmox VE with various services including Home Assistant, media servers, and development environments.
 img: assets/img/homelab/homelab_project_page.png
-importance: 1
+importance: 2
 category: Infrastructure
 related_publications: false
 ---

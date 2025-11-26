@@ -159,19 +159,81 @@ While the integration poses challenges—such as configuring network settings, h
 
 ---
 
+## Computer Vision Integration
+
+Building on the communication and control foundation, I've begun integrating **machine vision capabilities** to enable vision-guided automation and adaptive control workflows.
+
+**Current Implementation:**
+- **OpenCV Integration:** Python-based vision processing pipeline for real-time object detection and tracking
+- **Camera Setup:** USB webcam mounted to workspace for proof-of-concept vision-guided operations
+- **Coordinate Transformation:** Developing camera-to-robot coordinate mapping for vision-based positioning
+- **Adaptive Control:** Exploring closed-loop visual servoing for dynamic object interaction
+
+**Vision System Architecture:**
+```
+Camera → OpenCV Processing → Object Detection → Coordinate Transform → Robot Commands
+   ↓           ↓                    ↓                   ↓                    ↓
+  USB      Python CV2         Blob/Edge/Color      Calibration Matrix   TCP/IP Interface
+```
+
+**Applications Being Explored:**
+- **Vision-Guided Pick-and-Place:** Object localization and grasping using visual feedback
+- **Quality Inspection Workflows:** Automated visual inspection of parts or assemblies
+- **Adaptive Task Execution:** Real-time trajectory adjustment based on visual input
+- **Object Recognition:** Identifying and classifying components for automated handling
+
+This vision integration represents a natural evolution toward **adaptive automation**—combining robotic manipulation with real-time sensor feedback to handle variable environments and dynamic tasks, directly applicable to R&D automation and advanced manufacturing scenarios.
+
+**Next Steps:**
+- Intel RealSense depth camera integration for 3D object localization
+- Machine learning-based object classification and pose estimation
+- Integration with ROS MoveIt! for vision-informed motion planning
+
+---
+
+## End-Effector & Tooling Development
+
+To expand the robot's capabilities beyond basic motion control, I'm developing **custom end-effectors and tooling** tailored to specific automation tasks—bridging mechanical design with robotic manipulation.
+
+**Current Development:**
+- **Modular Tool Interface:** Designing a quick-change tool plate for the J6 flange, enabling rapid switching between end-effectors
+- **Gripper Design:** CAD modeling of a parallel-jaw gripper actuated by pneumatic or servo drive
+- **Design for Automation:** Applying DFA principles to ensure repeatable, reliable tool mounting and operation
+- **3D Printing & Iteration:** Prototyping gripper components using additive manufacturing for rapid design validation
+
+**Design Approach:**
+```
+Task Requirements → CAD Design → Prototype (3D Print) → Test & Iterate → Production Method
+       ↓                ↓              ↓                    ↓                  ↓
+  Payload/Reach    SolidWorks      FDM/SLA Printing    Performance Eval    CNC/Injection
+```
+
+**Tooling Applications Being Explored:**
+- **Parallel Gripper:** For pick-and-place operations with prismatic objects
+- **Soft Gripper:** Compliant gripping for delicate or irregular parts
+- **Custom Jigs/Fixtures:** Task-specific tooling for assembly or inspection workflows
+- **Sensor Integration:** Force/torque sensors and tactile feedback for adaptive grasping
+
+This end-effector work demonstrates the **mechanical-robotic integration** essential for R&D automation—combining CAD design, rapid prototyping, and iterative testing to create task-specific automation solutions.
+
+**Relevance to Automation Engineering:**
+End-effector design is a critical component of automation cell development. Understanding how to design, prototype, and optimize tooling for specific tasks—while integrating with robotic controllers and vision systems—is foundational for advanced manufacturing automation and R&D engineering roles.
+
+---
+
 ## Future Directions
 
-1. **Custom Control Interface**  
-   - Web‑based dashboard and manual joystick control.  
-2. **High‑Level API**  
-   - RESTful endpoints for motion commands, sensor data, and status monitoring.  
-3. **Path Planning & Collision Detection**  
-   - Integration of motion planning libraries (e.g., MoveIt!) for safe, autonomous trajectories.  
-4. **Computer Vision Integration**  
-   - Mounting an Intel RealSense camera for object detection, human tracking, and adaptive task execution.  
-5. **Telemetry & Analytics**  
-   - Real‑time data logging of position, torque, and error states for predictive maintenance and performance tuning.  
-6. **Community Engagement**  
+1. **Custom Control Interface**
+   - Web‑based dashboard and manual joystick control.
+2. **High‑Level API**
+   - RESTful endpoints for motion commands, sensor data, and status monitoring.
+3. **Path Planning & Collision Detection**
+   - Integration of motion planning libraries (e.g., MoveIt!) for safe, autonomous trajectories.
+4. **Advanced Vision Capabilities**
+   - Intel RealSense depth camera, ML-based pose estimation, and human-robot collaboration safety.
+5. **Telemetry & Analytics**
+   - Real‑time data logging of position, torque, and error states for predictive maintenance and performance tuning.
+6. **Community Engagement**
    - Publishing tutorials, code samples, and collaborating with other robotics enthusiasts.
 
 ---

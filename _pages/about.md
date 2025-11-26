@@ -25,18 +25,25 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-## R&D Automation Engineer | Robotics & Control Systems
+## Control Systems Engineer | Robotics, Controls & Defense Systems
 
-I'm a **DCS Engineer at Siemens** specializing in **PCS7 distributed control systems** for industrial automation. My professional work focuses on process control, SCADA architecture, and safety-rated control systems in manufacturing environments. This production automation experience provides a unique foundation for exploring advanced robotics and R&D automation.
+I'm a **DCS Engineer at Siemens** specializing in **PCS7 distributed control systems** for industrial automation, with prior experience in **defense unmanned systems** at SCI Technology. My career spans production-scale control systems, defense platform engineering, and advanced robotics R&D.
 
-**Bridging Production Automation and Advanced Robotics R&D** — My career combines hands-on industrial controls engineering with a passion for cutting-edge robotics research. At Siemens, I work with enterprise-grade control systems (PCS7 DCS, Profibus/Profinet protocols, SIL-rated safety systems) that manage complex manufacturing processes. Outside of work, I apply these industrial automation principles to personal R&D projects, including restoration and integration of a Mitsubishi RV-6SDL-S15 industrial robot arm with ROS.
+**Bridging Defense Engineering, Production Automation, and Advanced Robotics R&D** — My background combines three complementary domains:
 
-This dual perspective—production scale automation *and* experimental robotics—positions me to understand both the reliability requirements of manufacturing systems and the innovation mindset needed for R&D engineering. I thrive at the intersection of mechanical systems, control engineering, and software integration.
+- **Industrial Control Systems (Current):** At Siemens, I engineer enterprise-grade PCS7 DCS for manufacturing automation—SCADA architecture, SIL-rated safety systems, and real-time control protocols (Profibus/Profinet/Modbus).
+
+- **Defense Unmanned Systems (Former):** At SCI Technology, I contributed to the **Aeroguard counter-UAS platform** as a mechanical design engineer, working cross-functionally on defense drone systems with emphasis on rapid R&D prototyping and DFA principles.
+
+- **Advanced Robotics R&D (Ongoing):** Personal projects include restoring and integrating a Mitsubishi RV-6SDL-S15 industrial robot with ROS, machine vision (OpenCV), and custom end-effector development—applying industrial automation rigor to experimental robotics.
+
+This convergence of **defense systems engineering**, **production automation**, and **robotics R&D** positions me to bridge operational requirements with innovative automation solutions. I thrive at the intersection of mechanical design, control systems, and software integration.
 
 ### Technical Expertise
 
 **Industrial Control Systems**
 - Siemens PCS7 DCS programming and configuration
+- PLC programming with STEP 7/TIA Portal
 - SCADA/HMI development and operator interfaces
 - Process automation and manufacturing control
 - Safety systems (SIL-rated control logic)
@@ -47,8 +54,17 @@ This dual perspective—production scale automation *and* experimental robotics�
 - Robot programming and motion control
 - ROS (Robot Operating System) integration
 - Industrial robot restoration and calibration
+- Machine vision integration (OpenCV, vision-guided automation)
+- End-effector and tooling design
 - Harmonic drive systems and servo motors
 - Trajectory planning and kinematics
+
+**Unmanned Systems & Defense Technology**
+- Counter-UAS platform design and integration (Aeroguard)
+- FAA Part 107 Remote Pilot Certificate
+- Defense systems mechanical design
+- Cross-functional collaboration in defense R&D environments
+- Rapid prototyping for operational deployment
 
 **Software & Systems Integration**
 - Python and C++ for automation scripting
@@ -58,18 +74,22 @@ This dual perspective—production scale automation *and* experimental robotics�
 - Git version control and documentation
 
 **Mechanical Engineering**
-- 3D CAD design and modeling
+- SolidWorks CAD design and modeling
 - CNC manufacturing and tooling
-- Defense industry design (previous role: drone systems at SCI Technology)
-- Design-for-automation (DFA) principles
+- Design-for-automation (DFA) and design-for-manufacturing (DFM)
+- Rapid prototyping (3D printing, additive manufacturing)
+- End-effector and fixture design
 
 ### Career Focus
 
-I'm pursuing opportunities in **R&D automation engineering** and **advanced manufacturing** where I can leverage my industrial controls background while contributing to innovative robotics and automation research. My ideal role combines:
-- Robotic systems development and integration
+I'm pursuing opportunities in **R&D automation engineering**, **advanced manufacturing**, and **defense technology** where I can bridge industrial controls expertise with robotics innovation and operational systems thinking. My ideal role combines:
+
+- Robotic systems development and integration (automation cells, end-effector design, vision-guided systems)
 - Manufacturing automation and process optimization
-- Cross-functional technical collaboration
-- R&D methodology with iterative prototyping
-- Defense technology or high-reliability applications
+- Cross-functional technical collaboration (mechanical, electrical, software, systems)
+- R&D methodology with rapid prototyping and iterative validation
+- Defense technology, unmanned systems, or high-reliability applications
+- Technical integration roles supporting operational deployment
 
 **Education:** B.S. Mechanical Engineering, Auburn University
+**Certifications:** FAA Part 107 Remote Pilot Certificate

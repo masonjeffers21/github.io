@@ -35,17 +35,18 @@
     },
     {
       "name": "SCI Technology",
-      "position": "Mechanical Design Engineer",
+      "position": "Mechanical Design Engineer (CO-OP)",
       "url": "",
       "startDate": "2021",
       "endDate": "2023",
-      "summary": "Mechanical engineer for defense unmanned systems. Designed drone components and subsystems with focus on manufacturability, integration, and performance in operational environments.",
+      "summary": "Mechanical design engineer for Aeroguard counter-UAS defense system. Contributed to mechanical design, system integration, and manufacturing engineering for defense unmanned aerial platforms in a fast-paced R&D environment.",
       "highlights": [
-        "Designed mechanical components and assemblies for defense drone platforms",
-        "Created 3D CAD models and technical drawings for CNC manufacturing",
-        "Collaborated with cross-functional teams on system integration and testing",
-        "Applied design-for-manufacturing (DFM) and design-for-automation (DFA) principles",
-        "Supported prototype builds and iterative design improvements"
+        "Designed mechanical components and assemblies for Aeroguard counter-UAS defense platform",
+        "Created 3D CAD models and technical drawings for CNC manufacturing and rapid prototyping",
+        "Collaborated with cross-functional teams (electrical, software, systems) on UAS integration and testing",
+        "Applied design-for-manufacturing (DFM) and design-for-automation (DFA) principles to defense systems",
+        "Supported iterative R&D prototype builds and design validation in operational context",
+        "Contributed to mechanical subsystem development for defense unmanned systems"
       ]
     }
   ],
@@ -78,7 +79,19 @@
         "Motion Control & Planning",
         "Servo Systems",
         "Industrial Robotics",
-        "Automation Architecture"
+        "Automation Architecture",
+        "Machine Vision Integration"
+      ]
+    },
+    {
+      "name": "Unmanned Systems",
+      "level": "Proficient",
+      "keywords": [
+        "UAS Operations (FAA Part 107)",
+        "Counter-UAS Systems",
+        "Defense Platform Integration",
+        "UAS Mechanical Design",
+        "System Integration & Testing"
       ]
     },
     {
@@ -90,7 +103,8 @@
         "Git/GitHub",
         "TCP/IP & Serial Communication",
         "Linux",
-        "System Integration"
+        "System Integration",
+        "OpenCV"
       ]
     },
     {
@@ -102,8 +116,17 @@
         "DFA/DFM",
         "Defense Systems Design",
         "Mechanical Assembly",
-        "3D Printing"
+        "3D Printing",
+        "Rapid Prototyping"
       ]
+    }
+  ],
+  "certificates": [
+    {
+      "name": "FAA Part 107 Remote Pilot Certificate",
+      "issuer": "Federal Aviation Administration",
+      "date": "",
+      "url": ""
     }
   ],
   "projects": [
@@ -114,10 +137,23 @@
         "Mechanical restoration: Rebuilt J2 harmonic drive, AC servo motors, and all 6 axes",
         "Communication: Developed Python interface for Ethernet (Modbus/TCP) and RS-232 control",
         "Integration: RT Toolbox2 for MELFA BASIC programming and real-time telemetry",
-        "Architecture: Designed modular control system with error handling and state management"
+        "Architecture: Designed modular control system with error handling and state management",
+        "Machine Vision: Integrated OpenCV for vision-guided automation and adaptive control"
       ],
       "url": "/projects/robot-arm/",
-      "keywords": ["Robotics", "ROS", "Python", "Industrial Automation", "Motion Control"]
+      "keywords": ["Robotics", "ROS", "Python", "Industrial Automation", "Motion Control", "Machine Vision"]
+    },
+    {
+      "name": "Aeroguard Counter-UAS System",
+      "summary": "Mechanical design and integration engineering for defense counter-unmanned aerial system platform at SCI Technology. Contributed to rapid R&D prototyping and cross-functional system development.",
+      "highlights": [
+        "Mechanical component design for counter-UAS defense platform using SolidWorks CAD",
+        "Cross-functional collaboration with electrical, software, and systems engineering teams",
+        "Applied DFA/DFM principles to defense unmanned systems in iterative R&D environment",
+        "Supported prototype builds and design validation for operational deployment"
+      ],
+      "url": "/projects/aeroguard/",
+      "keywords": ["Defense Systems", "UAS", "CAD Design", "System Integration", "Counter-UAS"]
     },
     {
       "name": "Homelab Infrastructure",
