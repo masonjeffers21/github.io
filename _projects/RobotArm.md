@@ -87,7 +87,16 @@ While the integration poses challenges—such as configuring network settings, h
 
 ## Achievements & Technical Specs
 
-**[VIDEO DEMO NEEDED: Add 1-2 minute video showing robot in operation - movements, calibration, control interface]**
+<div class="row justify-content-center mt-3 mb-4">
+  <div class="col-lg-10">
+    <video width="100%" controls preload="metadata">
+      <source src="{{ '/assets/video/robot_arm_video.MOV' | relative_url }}" type="video/quicktime">
+      <source src="{{ '/assets/video/robot_arm_video.mp4' | relative_url }}" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <p class="text-center text-muted mt-2"><em>Robot arm demonstration: movements, calibration, and control interface</em></p>
+  </div>
+</div>
 
 ### System Architecture
 
