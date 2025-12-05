@@ -249,13 +249,13 @@ End-effector design is a critical component of automation cell development. Unde
 
 **Code Repository**
 
-**[GITHUB LINK NEEDED: Add link to public repository with Python control scripts, ROS packages, communication protocols]**
-
-Example code structure:
+The Python control scripts and ROS integration code for this project are available on GitHub. The repository includes:
 - `robot_control/`: Python modules for TCP/IP and serial communication
 - `ros_workspace/`: ROS packages for robot interface
 - `config/`: Controller configuration files
 - `docs/`: Technical documentation and calibration procedures
+
+[View on GitHub](https://github.com/masonjeffers21/robot-arm-integration)
 
 ---
 
