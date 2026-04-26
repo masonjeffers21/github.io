@@ -113,7 +113,7 @@ The mechanical design and systems integration skills developed through these UAS
 - **Rapid Prototyping Methodology:** Iterative R&D approach with fast build-test-refine cycles
 - **Systems Integration:** Understanding of how mechanical, electrical, and software subsystems work together
 
-Combined with my current work on **industrial robot integration** and **PCS7 automation systems**, this UAS background provides a unique perspective on both production-scale automation and advanced R&D development.
+Combined with my **industrial DCS background** at Siemens and **personal robotics R&D**, this UAS experience provides a multidisciplinary foundation that I now bring to aerospace data systems and controls work at Blue Origin.
 
 ---
 

@@ -67,7 +67,7 @@ This restoration process involved a fair amount of trial and error, particularly
 
 After resolving the mechanical issues, I turned my attention to the robot's control systems. The controller uses a proprietary communication protocol, requiring careful reverse engineering to establish reliable connectivity. I began by analyzing the electrical signals using an oscilloscope to understand the timing and voltage levels of the communication interface.
 
-**Leveraging Industrial Controls Experience:** My professional background with Siemens PCS7 DCS systems proved invaluable in this phase. Experience with industrial communication protocols (Profibus, Profinet), SCADA architectures, and safety-rated control systems directly informed my approach to interfacing with the Mitsubishi controller. The concepts of deterministic communication, real-time control loops, and safety interlocking from DCS engineering translate directly to robotic control systems.
+**Leveraging Industrial Controls Experience:** My background with Siemens PCS7 DCS systems proved invaluable in this phase. Experience with industrial communication protocols (Profibus, Profinet), SCADA architectures, and safety-rated control systems directly informed my approach to interfacing with the Mitsubishi controller. The concepts of deterministic communication, real-time control loops, and safety interlocking from DCS engineering translate directly to robotic control systems—and that same instrumentation-and-controls mindset carries forward into my aerospace work at Blue Origin.
 
 My current efforts are focused on establishing reliable communication with the controller through multiple approaches:
 
@@ -140,7 +140,7 @@ While the integration poses challenges—such as configuring network settings, h
         │  • RESTful API (automation)         │
         └─────────────────────────────────────┘
 
-🏭 Industrial Controls Context (Siemens PCS7 DCS):
+🏭 Industrial Controls Background (Siemens PCS7 DCS):
    • Communication protocols (Profibus/Profinet concepts)
    • SCADA architecture patterns
    • Safety systems design (SIL-rated)

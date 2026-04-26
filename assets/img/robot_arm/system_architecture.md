@@ -38,8 +38,8 @@ graph TB
         Python --> API
     end
 
-    subgraph DCS_Connection["🏭 Industrial Controls Context"]
-        PCS7["Siemens PCS7 DCS Experience<br/>- Industrial Protocols (Profibus/Profinet)<br/>- SCADA Architecture<br/>- Safety Systems (SIL-rated)<br/>- Real-time Control Loops"]
+    subgraph DCS_Connection["🏭 Industrial Controls Background"]
+        PCS7["Siemens PCS7 DCS Background<br/>- Industrial Protocols (Profibus/Profinet)<br/>- SCADA Architecture<br/>- Safety Systems (SIL-rated)<br/>- Real-time Control Loops"]
 
         PCS7 -.->|"Concepts Applied"| Communication
         PCS7 -.->|"Safety & Reliability"| Software
@@ -75,7 +75,7 @@ graph TB
 - **Joystick Control**: Manual operation and teaching capabilities
 - **RESTful API**: Programmatic access for automation workflows
 
-### Industrial Controls Context
+### Industrial Controls Background
 **DCS Engineering Experience Applied:**
 - Deterministic communication protocols from Siemens PCS7 work
 - Safety system design principles (SIL-rated controls)

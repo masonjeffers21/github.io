@@ -2,19 +2,19 @@
 # Site settings
 # -----------------------------------------------------------------------------
 
-title: "Mason Jeffers | Control Systems Engineer" # the website title; if blank, your full name will be used instead
+title: "Mason Jeffers | Data Systems and Controls Engineer" # the website title; if blank, your full name will be used instead
 first_name: Mason
 middle_name:
 last_name: Jeffers
 contact_note: >
   For inquiries, please email me at <a href="mailto:masonjeffers0@gmail.com">masonjeffers0@gmail.com</a>.
 description: >
-  Mason Jeffers - R&D Automation Engineer specializing in robotics, industrial control systems, and advanced manufacturing. Experience with Siemens PCS7 DCS, ROS robotics, and automation systems integration.
+  Mason Jeffers - Data Systems and Controls Engineer at Blue Origin. Background spans aerospace test and instrumentation, industrial DCS, defense unmanned systems, and robotics R&D.
 footer_text: >
   <!--Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with the <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.-->
   <!--Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.-->
   <!--Photos from <a href="https://unsplash.com" target="_blank">Unsplash</a>.-->
-keywords: automation engineer, robotics engineer, ROS, Siemens PCS7, DCS, industrial automation, manufacturing, control systems
+keywords: data systems engineer, controls engineer, aerospace engineer, Blue Origin, robotics, ROS, industrial automation, DCS, instrumentation, test engineering
 lang: en
 icon: 🚀
 

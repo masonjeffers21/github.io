@@ -25,21 +25,30 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-## Control Systems Engineer | Robotics, Controls & Defense Systems
+## Data Systems and Controls Engineer | Aerospace, Robotics & Automation
 
-I'm a **DCS Engineer at Siemens** specializing in **PCS7 distributed control systems** for industrial automation, with prior experience in **defense unmanned systems** at SCI Technology. My career spans production-scale control systems, defense platform engineering, and advanced robotics R&D.
+I'm a **Data Systems and Controls Engineer at Blue Origin**, the aerospace company founded by Jeff Bezos with a long-term vision of enabling millions of people to live and work in space. Blue Origin develops reusable launch vehicles, rocket engines, and lunar landing systems, and I'm proud to contribute to that mission.
 
-**Bridging Defense Engineering, Production Automation, and Advanced Robotics R&D** — My background combines three complementary domains:
+My career so far has built toward this role through three complementary domains—**industrial control systems**, **defense unmanned systems**, and **robotics R&D**—giving me a broad foundation in instrumentation, automation, and mission-critical engineering.
 
-- **Industrial Control Systems (Current):** At Siemens, I engineer enterprise-grade PCS7 DCS for manufacturing automation—SCADA architecture, SIL-rated safety systems, and real-time control protocols (Profibus/Profinet/Modbus).
+- **Aerospace Data Systems & Controls (Current):** At Blue Origin, I work on data systems and controls supporting the development of next-generation aerospace platforms.
 
-- **Defense Unmanned Systems (Former):** At SCI Technology, I contributed to the **Aeroguard counter-UAS platform** as a mechanical design engineer, working cross-functionally on defense drone systems with emphasis on rapid R&D prototyping and DFA principles.
+- **Industrial Control Systems (2023–2026):** As a DCS Engineer at Siemens, I configured and programmed enterprise-grade **PCS7 distributed control systems** for industrial automation—SCADA architecture, SIL-rated safety logic, and real-time control protocols (Profibus/Profinet/Modbus).
 
-- **Advanced Robotics R&D (Ongoing):** Personal projects include restoring and integrating a Mitsubishi RV-6SDL-S15 industrial robot with ROS, machine vision (OpenCV), and custom end-effector development—applying industrial automation rigor to experimental robotics.
+- **Defense Unmanned Systems (2021–2023):** At SCI Technology, I contributed to the **Aeroguard counter-UAS platform** as a mechanical design engineer, working cross-functionally on defense drone systems with emphasis on rapid R&D prototyping and DFA principles.
 
-This convergence of **defense systems engineering**, **production automation**, and **robotics R&D** positions me to bridge operational requirements with innovative automation solutions. I thrive at the intersection of mechanical design, control systems, and software integration.
+- **Robotics R&D (Ongoing):** Personal projects include restoring and integrating a Mitsubishi RV-6SDL-S15 industrial robot with ROS, machine vision (OpenCV), and custom end-effector development.
+
+I thrive at the intersection of **mechanical design**, **control systems**, and **software integration**, and I'm motivated by hard engineering problems where instrumentation, data, and automation come together.
 
 ### Technical Expertise
+
+**Data Systems & Instrumentation**
+- Data acquisition (DAQ) and instrumentation systems
+- Test stand and laboratory data systems
+- Sensor integration and signal conditioning
+- Real-time telemetry and monitoring
+- TCP/IP and serial communication protocols
 
 **Industrial Control Systems**
 - Siemens PCS7 DCS programming and configuration
@@ -68,7 +77,6 @@ This convergence of **defense systems engineering**, **production automation**, 
 
 **Software & Systems Integration**
 - Python and C++ for automation scripting
-- TCP/IP and serial communication protocols
 - Control system architecture and design
 - Cross-functional hardware/software integration
 - Git version control and documentation
@@ -83,6 +91,7 @@ This convergence of **defense systems engineering**, **production automation**, 
 ### Education
 
 **B.S. Mechanical Engineering, Auburn University**
+
 ### Certifications
 
 **FAA Part 107 Remote Pilot Certificate**
