@@ -18,7 +18,7 @@ ninja.data = [{
           },
         },{id: "nav-cv",
           title: "CV",
-          description: "Resume and professional experience of Mason Jeffers - Control Systems Engineer",
+          description: "Resume and professional experience of Mason Jeffers - Data Systems and Controls Engineer",
           section: "Navigation",
           handler: () => {
             window.location.href = "/cv/";
